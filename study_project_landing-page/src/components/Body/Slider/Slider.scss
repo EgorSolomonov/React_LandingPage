@@ -1,0 +1,138 @@
+@import "../../Head/HeadBar.scss";
+
+.slider_wrapper {
+  background-color: $thirdColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .arrow {
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+    cursor: pointer;
+
+    @include tabIpadMini {
+      top: 700px;
+    }
+
+    @include tabIpadAir {
+      top: 800px;
+    }
+
+    @include iphoneSE {
+      width: 25px;
+      top: 450px;
+    }
+  }
+
+  .left {
+    transform: rotateY(180deg);
+    left: 150px;
+
+    @include iphoneSE {
+      left: 100px;
+    }
+  }
+
+  .right {
+    right: 150px;
+
+    @include iphoneSE {
+      right: 100px;
+    }
+  }
+
+  .slider {
+    height: 300px;
+    left: 0;
+    display: flex;
+    position: absolute;
+    transition: all 1s ease-out;
+
+    @include iphoneSE {
+      height: 200px;
+    }
+
+    .slide_container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .slide {
+        display: flex;
+        width: 700px;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid black;
+        box-shadow: 10px 10px 15px -1px $activeBackColorHeadBar;
+
+        .slide_left {
+          flex: 4;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 40px;
+
+          @include iphoneSE {
+            padding: 20px;
+          }
+
+          img {
+            width: 20%;
+            margin-bottom: 35px;
+
+            @include iphoneSE {
+              margin-bottom: -25px;
+              align-self: end;
+            }
+          }
+
+          h2 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: black;
+
+            @include iphoneSE {
+              margin-bottom: 10px;
+              font-size: 22px;
+            }
+          }
+
+          p {
+            width: 110%;
+          }
+
+          a {
+            margin-top: 20px;
+            color: black;
+            font-weight: 600;
+
+            @include iphoneSE {
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .slide_right {
+          width: 100%;
+          flex: 6;
+          display: flex;
+          justify-content: center;
+          padding: 20px;
+
+          @include iphoneSE {
+            padding: 15px;
+          }
+
+          img {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,188 @@
+@import "../../Head/HeadBar.scss";
+
+.intro_wrapper {
+  background-color: white;
+
+  .intro {
+    height: 100%;
+    display: flex;
+
+    @include tabIpadMini {
+      flex-direction: column;
+    }
+
+    @include tabIpadAir {
+      flex-direction: column;
+    }
+
+    @include iphoneSE {
+      flex-direction: column;
+    }
+
+    .intro_left {
+      flex: 0.5;
+
+      .imgContainer {
+        width: 103%;
+        height: 100%;
+        overflow: hidden;
+        margin-left: -20px;
+
+        @include tabIpadMini {
+          width: 90%;
+          height: 55%;
+          overflow: visible;
+          margin: 0 auto;
+        }
+
+        @include tabIpadAir {
+          width: 90%;
+          height: 55%;
+          overflow: visible;
+          margin: 0 auto;
+        }
+
+        @include iphoneSE {
+          width: 90%;
+          height: 55%;
+          overflow: visible;
+          margin: 0 auto;
+        }
+
+        img {
+          border-radius: 0 50% 50% 0;
+
+          @include tabIpadMini {
+            border-radius: 0 0 50% 50%;
+            width: 90%;
+            height: 165%;
+            margin: -55px 0 0 36px;
+          }
+
+          @include tabIpadAir {
+            border-radius: 0 0 50% 50%;
+            width: 90%;
+            height: 165%;
+            margin: -55px 0 0 36px;
+          }
+
+          @include iphoneSE {
+            border-radius: 0 0 50% 50%;
+            width: 90%;
+            height: 165%;
+            margin: -20px 0 0 17px;
+          }
+        }
+      }
+    }
+    .intro_right {
+      flex: 0.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30%;
+
+        @include tabIpadMini {
+          margin-top: -15%;
+          align-items: center;
+        }
+
+        @include tabIpadAir {
+          margin-top: -10%;
+          align-items: center;
+        }
+
+        @include iphoneSE {
+          margin-top: -10%;
+          align-items: center;
+        }
+
+        h1 {
+          font-size: 45px;
+
+          @include iphoneSE {
+            font-size: 25px;
+          }
+        }
+        h2 {
+          font-size: 40px;
+          margin-left: 3%;
+
+          @include iphoneSE {
+            font-size: 25px;
+          }
+        }
+        h3 {
+          font-size: 35px;
+          color: $thirdColor;
+          margin-left: 6%;
+
+          @include iphoneSE {
+            font-size: 25px;
+          }
+
+          .ityped-cursor {
+            font-size: 2.2rem;
+            opacity: 1;
+            -webkit-animation: blink 0.3s infinite;
+            -moz-animation: blink 0.3s infinite;
+            animation: blink 0.3s infinite;
+            animation-direction: alternate;
+          }
+
+          @keyframes blink {
+            100% {
+              opacity: 0;
+            }
+          }
+
+          @-webkit-keyframes blink {
+            100% {
+              opacity: 0;
+            }
+          }
+
+          @-moz-keyframes blink {
+            100% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+      .arrow_down {
+        margin-bottom: 3%;
+
+        @include tabIpadMini {
+          padding: 0 0 1.5% 0;
+          margin: 0 auto;
+        }
+
+        @include tabIpadAir {
+          padding: 0 0 2.5% 0;
+          margin: 0 auto;
+        }
+
+        @include iphoneSE {
+          padding: 0 0 2.5% 0;
+          margin: 0 auto;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          animation: blink 2s infinite;
+          cursor: pointer;
+
+          @include iphoneSE {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

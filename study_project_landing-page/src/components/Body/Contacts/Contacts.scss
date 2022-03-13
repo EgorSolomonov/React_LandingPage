@@ -1,0 +1,167 @@
+@import "../../Head/HeadBar.scss";
+
+.contacts_wrapper {
+  background-color: rgb(172, 166, 166);
+
+  .contacts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .left {
+      flex: 0.5;
+
+      @include tabIpadMini {
+        display: none;
+      }
+
+      @include tabIpadAir {
+        display: none;
+      }
+
+      @include iphoneSE {
+        display: none;
+      }
+
+      img {
+        width: 900px;
+        transform: rotate(343deg);
+      }
+    }
+
+    .right {
+      height: 75%;
+      flex: 0.5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+
+      @include tabIpadMini {
+        background: url("../../../images/contact-book.png") 150px 20px no-repeat;
+        background-size: 30%;
+      }
+
+      @include tabIpadAir {
+        background: url("../../../images/contact-book.png") 180px 60px no-repeat;
+        background-size: 30%;
+      }
+
+      h1 {
+        margin-bottom: 50px;
+
+        @include tabIpadMini {
+          margin-bottom: 70px;
+          margin-left: 7%;
+          align-self: flex-start;
+        }
+
+        @include tabIpadAir {
+          margin-bottom: 70px;
+          margin-left: 7%;
+          align-self: flex-start;
+        }
+
+        @include iphoneSE {
+          margin-top: 100px;
+        }
+      }
+
+      .input_email {
+        width: 400px;
+        height: 100px;
+
+        @include iphoneSE {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 250px;
+          height: 100px;
+        }
+
+        input {
+          height: 30px;
+          width: 100%;
+          border-radius: 5px;
+          text-indent: 10px;
+          font-size: 20px;
+          padding: 10px;
+          border: 1px solid $activeBackColorHeadBar;
+
+          @include iphoneSE {
+            height: 20px;
+            width: 100%;
+          }
+        }
+      }
+
+      .input_text {
+        width: 400px;
+        height: 300px;
+
+        @include iphoneSE {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 250px;
+          height: 300px;
+        }
+
+        textarea {
+          width: 100%;
+          border-radius: 5px;
+          text-indent: 10px;
+          font-size: 20px;
+          padding: 10px;
+          border: 1px solid $activeBackColorHeadBar;
+
+          @include iphoneSE {
+            height: 100px;
+          }
+        }
+      }
+
+      .submit_button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 100px;
+
+        @include iphoneSE {
+          display: flex;
+          justify-content: center;
+        }
+
+        button {
+          width: 200px;
+          height: 40px;
+          border-radius: 5px;
+          font-size: 20px;
+          background-color: $activeBackColorHeadBar;
+          border: 1px solid white;
+          color: white;
+
+          @include iphoneSE {
+            width: 150px;
+          }
+        }
+      }
+
+      .errors {
+        padding: 5px;
+        font-weight: 800;
+        color: $thirdColor;
+      }
+
+      .reply {
+        color: #ff5a18;
+        font-size: 25px;
+      }
+    }
+  }
+}

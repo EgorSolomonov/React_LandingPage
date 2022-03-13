@@ -1,0 +1,26 @@
+.app {
+  height: 100vh;
+  color: #302f43;
+
+  .body {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: brown;
+    position: relative;
+    top: 60px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scrollbar-width: none; // for FireFox
+    &::-webkit-scrollbar {
+      // For Others
+      display: none;
+    }
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 60px);
+      scroll-snap-align: start;
+    }
+  }
+}
