@@ -2,7 +2,7 @@
   "name": "study_project_landing-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://egorsolomonov.github.io/StudyProjects/",
+  "homepage": "https://egorsolomonov.github.io/React_LandingPage/",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",

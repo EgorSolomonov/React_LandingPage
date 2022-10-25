@@ -8,16 +8,8 @@
   transition: all 0.3s ease;
   cursor: pointer;
 
-  @include tabIpadMini {
-    width: 40%;
-  }
-
-  @include tabIpadAir {
-    width: 40%;
-  }
-
-  @include iphoneSE {
-    width: 36%;
+  @media (max-width: 780px) {
+    width: 25%;
   }
 
   img {

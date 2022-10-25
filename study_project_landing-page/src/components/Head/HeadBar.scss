@@ -50,6 +50,10 @@ $thirdColor: #eb3333;
       justify-content: space-around;
       align-items: baseline;
 
+      @media (max-width: 780px) {
+        justify-content: center;
+      }
+
       @include iphoneSE {
         width: 250px;
       }
@@ -63,6 +67,10 @@ $thirdColor: #eb3333;
         display: flex;
         justify-content: space-evenly;
         justify-self: start;
+
+        @media (max-width: 780px) {
+          display: none;
+        }
 
         @include iphoneSE {
           display: none;

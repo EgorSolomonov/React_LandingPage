@@ -28,50 +28,12 @@
         overflow: hidden;
         margin-left: -20px;
 
-        @include tabIpadMini {
-          width: 90%;
-          height: 55%;
-          overflow: visible;
-          margin: 0 auto;
-        }
-
-        @include tabIpadAir {
-          width: 90%;
-          height: 55%;
-          overflow: visible;
-          margin: 0 auto;
-        }
-
-        @include iphoneSE {
-          width: 90%;
-          height: 55%;
-          overflow: visible;
-          margin: 0 auto;
+        @media (max-width: 780px) {
+          display: none;
         }
 
         img {
           border-radius: 0 50% 50% 0;
-
-          @include tabIpadMini {
-            border-radius: 0 0 50% 50%;
-            width: 90%;
-            height: 165%;
-            margin: -55px 0 0 36px;
-          }
-
-          @include tabIpadAir {
-            border-radius: 0 0 50% 50%;
-            width: 90%;
-            height: 165%;
-            margin: -55px 0 0 36px;
-          }
-
-          @include iphoneSE {
-            border-radius: 0 0 50% 50%;
-            width: 90%;
-            height: 165%;
-            margin: -20px 0 0 17px;
-          }
         }
       }
     }

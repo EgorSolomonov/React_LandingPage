@@ -13,6 +13,10 @@
     margin-top: 7%;
     width: 60%;
 
+    @media (max-width: 780px) {
+      width: 100%;
+    }
+
     @include iphoneSE {
       width: 75%;
     }
@@ -27,6 +31,8 @@
 
     .portfolio_menu {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .portfolio_items {
@@ -34,6 +40,10 @@
       flex-wrap: wrap;
       justify-content: center;
       max-height: 500px;
+
+      @media (max-width: 780px) {
+        width: 100%;
+      }
     }
   }
 }
