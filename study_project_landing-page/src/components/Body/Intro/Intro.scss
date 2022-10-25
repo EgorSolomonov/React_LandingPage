@@ -5,21 +5,34 @@
 
   .intro {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     @include tabIpadMini {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 
     @include tabIpadAir {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 
     @include iphoneSE {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 
     .intro_left {
+      -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
       flex: 0.5;
 
       .imgContainer {
@@ -38,28 +51,48 @@
       }
     }
     .intro_right {
+      -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
       flex: 0.5;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
 
       .textContainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         margin-top: 30%;
 
         @include tabIpadMini {
           margin-top: -15%;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
         }
 
         @include tabIpadAir {
           margin-top: -10%;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
         }
 
         @include iphoneSE {
           margin-top: -10%;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
         }
 
@@ -91,8 +124,8 @@
             font-size: 2.2rem;
             opacity: 1;
             -webkit-animation: blink 0.3s infinite;
-            -moz-animation: blink 0.3s infinite;
             animation: blink 0.3s infinite;
+            -webkit-animation-direction: alternate;
             animation-direction: alternate;
           }
 
@@ -103,12 +136,6 @@
           }
 
           @-webkit-keyframes blink {
-            100% {
-              opacity: 0;
-            }
-          }
-
-          @-moz-keyframes blink {
             100% {
               opacity: 0;
             }
@@ -136,6 +163,7 @@
         img {
           width: 30px;
           height: 30px;
+          -webkit-animation: blink 2s infinite;
           animation: blink 2s infinite;
           cursor: pointer;
 

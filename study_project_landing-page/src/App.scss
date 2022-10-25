@@ -9,11 +9,12 @@
     position: relative;
     top: 60px;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scrollbar-width: none; // for FireFox
     &::-webkit-scrollbar {
-      // For Others
+     
       display: none;
     }
 

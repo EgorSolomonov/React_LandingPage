@@ -30,11 +30,19 @@ $thirdColor: #eb3333;
   top: 0;
   z-index: 2;
   color: $unActiveMainFontColor;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 
   .head_bar_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
     padding: 0 20px;
@@ -46,11 +54,18 @@ $thirdColor: #eb3333;
 
     .head_bar_logo {
       width: 650px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-pack: distribute;
       justify-content: space-around;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
       align-items: baseline;
 
       @media (max-width: 780px) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
       }
 
@@ -64,8 +79,13 @@ $thirdColor: #eb3333;
 
       .head_bar_contacts {
         width: 380px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
+        -ms-grid-column-align: start;
         justify-self: start;
 
         @media (max-width: 780px) {
@@ -82,7 +102,11 @@ $thirdColor: #eb3333;
 
         .head_bar_phone,
         .head_bar_email {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           width: 200px;
           margin-left: 8px;
@@ -96,16 +120,25 @@ $thirdColor: #eb3333;
     .head_bar_hamburger {
       width: 30px;
       height: 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+      -ms-flex-pack: distribute;
       justify-content: space-around;
       cursor: pointer;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
 
       > span {
         width: 100%;
         height: 3px;
         background-color: $unActiveMainFontColor;
+        -webkit-transition: all 1.5s ease;
+        -o-transition: all 1.5s ease;
         transition: all 1.5s ease;
       }
     }
@@ -115,25 +148,39 @@ $thirdColor: #eb3333;
     color: $activeActiveMainFontColor;
 
     .head_bar_hamburger {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
 
       span {
         background-color: $activeActiveMainFontColor;
 
         &:first-child {
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
           transform: rotate(90deg);
           margin-left: -10px;
+          -webkit-transform-origin: unset;
+          -ms-transform-origin: unset;
           transform-origin: unset;
         }
         &:nth-child(2) {
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
           transform: rotate(90deg);
           margin-left: 1px;
+          -webkit-transform-origin: unset;
+          -ms-transform-origin: unset;
           transform-origin: unset;
           margin-top: -30px;
         }
         &:last-child {
+          -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
           transform: rotate(90deg);
           margin-left: 12px;
+          -webkit-transform-origin: unset;
+          -ms-transform-origin: unset;
           transform-origin: unset;
           margin-top: -30px;
         }

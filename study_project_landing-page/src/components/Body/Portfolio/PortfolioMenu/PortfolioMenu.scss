@@ -1,10 +1,13 @@
 @import "../../../Head/HeadBar.scss";
 
 .menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 8px 10px;
-  
 
   &:nth-child(1n + 2) {
     margin-left: 20px;

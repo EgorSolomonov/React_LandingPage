@@ -2,8 +2,14 @@
 
 .slider_wrapper {
   background-color: $thirdColor;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: relative;
 
@@ -28,6 +34,7 @@
   }
 
   .left {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     left: 150px;
 
@@ -81,8 +88,12 @@
   .slider {
     height: 300px;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
+    -webkit-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
     transition: all 1s ease-out;
 
     @include iphoneSE {
@@ -91,17 +102,26 @@
 
     .slide_container {
       width: 100vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
 
       .slide {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 700px;
         height: 100%;
         background-color: white;
         border-radius: 20px;
         border: 1px solid black;
+        -webkit-box-shadow: 10px 10px 15px -1px $activeBackColorHeadBar;
         box-shadow: 10px 10px 15px -1px $activeBackColorHeadBar;
 
         @media (max-width: 768px) {
@@ -109,9 +129,18 @@
         }
 
         .slide_left {
+          -webkit-box-flex: 4;
+          -ms-flex: 4;
           flex: 4;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
           flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
           padding: 40px;
 
@@ -125,6 +154,8 @@
 
             @include iphoneSE {
               margin-bottom: -25px;
+              -ms-flex-item-align: end;
+              -ms-grid-row-align: end;
               align-self: end;
             }
           }
@@ -157,8 +188,14 @@
 
         .slide_right {
           width: 100%;
+          -webkit-box-flex: 6;
+          -ms-flex: 6;
           flex: 6;
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
           padding: 20px;
 
